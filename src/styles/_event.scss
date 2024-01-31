@@ -1,7 +1,8 @@
 @use 'variables';
 
 .event {
-    padding: 80px 0;
+    padding: 40px 0;
+    
     
 
     &--frontend {
@@ -56,15 +57,22 @@
         &__description {
             
             line-height: 22px;
+            a {
+                text-decoration: none;
+            }
         }
     }
     @media (max-width: 640px) {
         .container {
             display: block;
+            text-align: center;
+            
         }
 
         &__image {
-            width: 100%;
+            width: 30%;
+            
+            
         }
 
         &__details {

@@ -1,12 +1,18 @@
 @use 'variables';
 
 .hero {
+    
     padding-top: 64px;
     padding-bottom: 100px;
-    background-image: url(../images/fundo.png);
+    background-image: url(../images/fundo3.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    @media (max-width: 640px) {
+        background-image: url(../images/fundo_resp3.png);
+    }
+    
     
 
     .container {
@@ -31,25 +37,46 @@
         line-height: 56px;
         font-weight: 800;
         text-align: center;
+
+    }
+    &__text2 {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 28px;
+        
     }
 
     &__logo {
+        padding-top: 8px;
+        padding-bottom: 8px;
         margin: 0 auto;
-        height: 80px;
+        height: 220px;
         display: block;
+        
+        &__text {
+        // font-family: "Luckiest Guy", cursive;
+        font-family: "Slackey", sans-serif;
+        font-size: 56px ;
+        text-align: center;
+
+        }
     }
 
     @media (max-width: 640px) {
         padding: 40px 0;
 
         &__logo {
-            height: 40px;
+            height: 120px;
         }
 
         &__text {
             font-size: 22px;
             line-height: 24px;
             margin: 24px 0;
+        }
+
+        &__text2 {
+            font-size: 18px;
         }
     }
 }
